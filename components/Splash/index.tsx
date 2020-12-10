@@ -1,7 +1,7 @@
 import React from 'react'
-import { View, Text, Button } from 'react-native'
-// TODO: Fix imports
+import { View, Text } from 'react-native'
 import SplashStyles from './splash-style'
+import Button from '../Button/index'
 
 function Splash({ navigation }) {
   return (
@@ -9,8 +9,8 @@ function Splash({ navigation }) {
       <Text style={SplashStyles.title}>
         {`Northeastern University\n COVID-19 Tracer`}
       </Text>
-      <View style={SplashStyles.button}>
-        <Button title={'Log In'} onPress={() => { navigation.navigate('Home') }} color={'#9C2C2C'}/>
+      <View style={SplashStyles.buttonContainer}>
+        <Button label={'Log In'} onPress={ () => { navigation.navigate('Login')}} buttonStyle={{borderColor: '#F7F3F3', borderWidth: 2,}} labelStyle={{}} />
       </View>
     </View>
   );

@@ -4,12 +4,16 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 import Splash from './components/Splash/index'
 import Home from './components/Home/index'
+import Login from './components/Login/index'
+import Location from './components/Location/index'
 import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading'
 
 const fetchFonts = () => {
   return Font.loadAsync({
-    'roboto-light': require('./assets/fonts/Roboto-Light.ttf')
+    'roboto-light': require('./assets/fonts/Roboto-Light.ttf'),
+    'roboto-medium': require('./assets/fonts/Roboto-Medium.ttf'),
+    'roboto-regular': require('./assets/fonts/Roboto-Regular.ttf')
   });
 };
 
@@ -33,6 +37,10 @@ export default function App() {
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen name='Splash'
                       component={Splash}/>
+        <Stack.Screen name='Login'
+                      component={Login}/>
+        <Stack.Screen name='Location'
+                      component={Location}/>
         <Stack.Screen name='Home'
                       component={Home}/>
       </Stack.Navigator>
