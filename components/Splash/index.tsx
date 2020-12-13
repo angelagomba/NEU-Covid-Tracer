@@ -10,7 +10,7 @@ function Splash({ navigation }) {
         {`Northeastern University\n COVID-19 Tracer`}
       </Text>
       <View style={SplashStyles.buttonContainer}>
-        <Button label={'Log In'} onPress={ () => { navigation.navigate('Login')}} buttonStyle={{borderColor: '#F7F3F3', borderWidth: 2,}} labelStyle={{}} />
+        <Button label={'Log In'} onPress={ () => { navigation.navigate('Login')}} buttonStyle={{borderColor: '#F7F3F3', borderWidth: 2,}} labelStyle={{fontSize: 18}} />
       </View>
     </View>
   );

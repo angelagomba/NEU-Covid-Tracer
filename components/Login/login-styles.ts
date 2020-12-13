@@ -14,7 +14,7 @@ const LoginStyles = StyleSheet.create({
     fontFamily: 'roboto-regular',
     fontSize: 18,
     marginBottom: 10,
-    visibility: 'visible',
+    display: 'flex',
   },
   loginContainer: {
     justifyContent: 'center',
@@ -35,7 +35,7 @@ const LoginStyles = StyleSheet.create({
     borderBottomWidth: 2,
     fontFamily: 'roboto-medium',
     fontSize: 18,
-    fontColor: '#B8B2B2',
+    color: '#B8B2B2',
     opacity: 0.7,
     marginBottom: 20,
     paddingLeft: 15,

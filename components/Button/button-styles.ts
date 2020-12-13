@@ -2,7 +2,6 @@ import { StyleSheet } from 'react-native'
 
 const ButtonStyles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#9C2C2C',
     width: '100%',
   },

@@ -25,7 +25,7 @@ function Login({ navigation }) {
     username !== '' && password !== '' ? navigation.navigate('Location') : setIsError(true)
   }
 
-  const errorStyle = {visibility: isError ? 'visible': 'hidden'}
+  const errorStyle = {display: isError ? 'flex': 'none'}
 
   return(
     <View style={LoginStyles.container}>

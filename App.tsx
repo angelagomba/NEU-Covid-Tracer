@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Splash from './components/Splash/index'
 import Home from './components/Home/index'
 import Login from './components/Login/index'
-import Location from './components/Location/index'
+import EnableLocation from './components/Location/index'
 import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading'
 
@@ -40,7 +40,7 @@ export default function App() {
         <Stack.Screen name='Login'
                       component={Login}/>
         <Stack.Screen name='Location'
-                      component={Location}/>
+                      component={EnableLocation}/>
         <Stack.Screen name='Home'
                       component={Home}/>
       </Stack.Navigator>
