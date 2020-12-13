@@ -35,7 +35,7 @@ const LoginStyles = StyleSheet.create({
     borderBottomWidth: 2,
     fontFamily: 'roboto-medium',
     fontSize: 18,
-    color: '#B8B2B2',
+    color: '#383636',
     opacity: 0.7,
     marginBottom: 20,
     paddingLeft: 15,
