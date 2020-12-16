@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import TabStyles from './tabs-styles'
 import Home from '../Icons/home'
 import Resources from '../Icons/resources'
@@ -10,11 +10,17 @@ import {
   View
 } from 'react-native'
 
-function Tabs({navigation, route}) {
 
-  const navigateToHome = () => {
-    navigation.navigate('Home')
+
+function Tabs({navigation, route}) {
+  
+
+
+  const navigateToTab = (tabName: string) => {
+    navigation.navigate(tabName)
   }
+  
+
 
   const homeIcon = (
     <Home fill={'#F7F3F3'} width={29} height={29}/>
@@ -34,7 +40,7 @@ function Tabs({navigation, route}) {
 
   const tabIcon = (icon: React.ReactElement, title: string, isViewing: boolean) => {
     return(
-      <TouchableOpacity style={[TabStyles.indicator, {backgroundColor: isViewing ? '#9C2C2C' : '#C94040'}]} onPress={navigateToHome}>
+      <TouchableOpacity style={[TabStyles.indicator, {backgroundColor: isViewing ? '#9C2C2C' : '#C94040'}]} onPress={() => navigateToTab(title)}>
         {icon}
         <Text style={TabStyles.text}>{title}</Text>
       </TouchableOpacity>
@@ -43,10 +49,10 @@ function Tabs({navigation, route}) {
 
   return(
     <View style={TabStyles.container}>
-      {tabIcon(homeIcon, 'Home', true)}
-      {tabIcon(resourcesIcon, 'Resources', false)}
-      {tabIcon(newsIcon, 'News', false)}
-      {tabIcon(profileIcon, 'Profile', false)}
+      {tabIcon(homeIcon, 'Home', route.name === 'Home')}
+      {tabIcon(resourcesIcon, 'Resources', route.name === 'Resources')}
+      {tabIcon(newsIcon, 'News', route.name === 'News')}
+      {tabIcon(profileIcon, 'Profile', route.name === 'Profile')}
     </View>
   )
 }
