@@ -9,6 +9,9 @@ import Resources from './components/Resources/index'
 import News from './components/News/index'
 import EnableLocation from './components/Location/index'
 import SelfScreening from './components/SelfScreening/index'
+import PositiveTestForm from './components/PositiveTestForm/index'
+import PositiveTestProtocol from './components/PositiveTestProtocol/index'
+import Confirmation from './components/Confirmation'
 import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading'
 
@@ -51,6 +54,12 @@ export default function App() {
                       component={Resources}/>
         <Stack.Screen name='SelfScreening'
                       component={SelfScreening}/>
+        <Stack.Screen name='PositiveTest'
+                      component={PositiveTestForm}/>
+        <Stack.Screen name='PositiveTestProtocol'
+                      component={PositiveTestProtocol}/>
+        <Stack.Screen name='Confirmation'
+                      component={Confirmation}/>
         <Stack.Screen name='News'
                       component={News}/>
       </Stack.Navigator>
