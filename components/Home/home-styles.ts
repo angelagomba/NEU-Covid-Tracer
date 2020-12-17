@@ -1,6 +1,9 @@
 import { StyleSheet } from 'react-native'
 
 const HomeStyles = StyleSheet.create({
+  container: {
+    height: '100%',
+  },
   buttonsContainer: {
     paddingVertical: 30,
     backgroundColor: '#9C2C2C',
@@ -61,6 +64,14 @@ const HomeStyles = StyleSheet.create({
     fontFamily: 'roboto-light',
     fontSize: 24,
     color: '#383636',
+  },
+  newsContainer: {
+    backgroundColor: '#F7F3F3',
+    marginVertical: 20,
+  },
+  contentContainer: {
+    marginHorizontal: 16,
+    marginVertical: 14,
   }
 })
 

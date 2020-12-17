@@ -2,7 +2,7 @@ import { StyleSheet } from 'react-native'
 
 const ResourcesStyles = StyleSheet.create({
   resources: {
-    marginBottom: 100,
+    height: '100%',
   },
   resourceContainer: {
     fontFamily: 'roboto-regular',

@@ -20,26 +20,26 @@ const demoResources = [
     title: 'Positive Test Protocol',
     desc: 'Official protocol to follow in the case that you have recieved a positive COVID-19 test result.'
   },
-  {
-    title: 'Potential Contact Protocol',
-    desc: 'Official protocol to follow in the case that you have recently been in contact with someone who has recieved a positive COVID-19 test result.'
-  },
-  {
-    title: 'Traveling During the Pandemic',
-    desc: 'CDC recommended best practices for safely traveling during the COVID-19 pandemic.',
-  },
-  {
-    title: 'Masks 101',
-    desc: 'Information about the different types of masks recommended by the CDC and theri effectiveness.'
-  },
-  {
-    title: 'How to Form a Quarantine Pod',
-    desc: 'Expert advice for how to safety have social connections during the pandemic.',
-  },
-  {
-    title: 'How to Avoid Isolation During the Pandemic',
-    desc: 'Expert advice for how to safely social distance and gather in your day-to-day.',
-  }
+  // {
+  //   title: 'Potential Contact Protocol',
+  //   desc: 'Official protocol to follow in the case that you have recently been in contact with someone who has recieved a positive COVID-19 test result.'
+  // },
+  // {
+  //   title: 'Traveling During the Pandemic',
+  //   desc: 'CDC recommended best practices for safely traveling during the COVID-19 pandemic.',
+  // },
+  // {
+  //   title: 'Masks 101',
+  //   desc: 'Information about the different types of masks recommended by the CDC and theri effectiveness.'
+  // },
+  // {
+  //   title: 'How to Form a Quarantine Pod',
+  //   desc: 'Expert advice for how to safety have social connections during the pandemic.',
+  // },
+  // {
+  //   title: 'How to Avoid Isolation During the Pandemic',
+  //   desc: 'Expert advice for how to safely social distance and gather in your day-to-day.',
+  // }
 ]
 
 function Resources({navigation, route}) {
@@ -62,10 +62,10 @@ const resource = (title: string, desc: string) => {
 const resourceEntries = () => ( demoResources.map((r) => resource(r.title, r.desc)))
 
   return (
-    <View>
-      <ScrollView style={[ResourcesStyles.resources]}>
+    <View style={ResourcesStyles.resources}>
       <Header label={'Resources'} labelStyle={{}}/>
       <SearchBar />
+      <ScrollView style={ResourcesStyles.resources}>
       {resourceEntries()}
       </ScrollView>
       <Tabs navigation={navigation} route={route}/>

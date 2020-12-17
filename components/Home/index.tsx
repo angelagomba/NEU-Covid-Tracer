@@ -4,6 +4,8 @@ import HomeStyles from './home-styles'
 import Button from '../Button/index'
 import Tabs from '../Tabs/index'
 import * as WebBrowser from 'expo-web-browser'
+import NewsStyles from '../News/news-styles'
+import Star from '../Icons/star'
 
 import { 
   ScrollView,
@@ -11,6 +13,11 @@ import {
   View 
 } from 'react-native'
 
+const demoNews = {
+  date: 'November 8, 2020',
+  title: 'Cases in Massachusetts Rise, 20 new deaths reported',
+  desc: 'The Massachusetts Department of Public Health reported 1,809 new confirmed coronavirus cases and...',
+}
 
 function Home({ navigation, route }) {
 
@@ -70,14 +77,30 @@ function Home({ navigation, route }) {
     </View>
   )
 
+  const news = (date: string, title: string, desc: string) => {
+    return (
+      <View style={HomeStyles.newsContainer}>
+        <View style={HomeStyles.contentContainer}>
+          <Text style={NewsStyles.dateText}>{date}</Text>
+          <Text style={NewsStyles.titleText}>{title}</Text>
+          <Text style={NewsStyles.descText}>{desc}</Text>
+          <View style={NewsStyles.star}>
+            <Star />
+          </View>
+        </View>
+        <View style={NewsStyles.break}/>
+      </View>
+    )
+  }
+
   return(
-    <View>
-      <ScrollView style={{marginBottom: 94,}}>
-        <Header label={'Home'} labelStyle={{}}/>
+    <View style={HomeStyles.container}>
+      <Header label={'Home'} labelStyle={{}}/>
+      <ScrollView style={[HomeStyles.container, {marginBottom: 94,}]}>
         {buttons}
         {section('NEU Test Scheduler', schedule, true, 'Go to NEU Test Scheduler', openTestScheduler)}
         {section('NEU COVID-19 Dashboard', dashboard, true, 'View More', () => {})}
-        {section('Latest News', dashboard, false, 'View More', navigation.navigate('News'))}
+        {section('Latest News', news(demoNews.date, demoNews.title, demoNews.desc), false, 'View More', navigation.navigate('News'))}
       </ScrollView>
       <Tabs navigation={navigation} route={route} />
     </View>

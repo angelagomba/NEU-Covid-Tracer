@@ -6,6 +6,7 @@ import Splash from './components/Splash/index'
 import Home from './components/Home/index'
 import Login from './components/Login/index'
 import Resources from './components/Resources/index'
+import News from './components/News/index'
 import EnableLocation from './components/Location/index'
 import SelfScreening from './components/SelfScreening/index'
 import * as Font from 'expo-font'
@@ -15,7 +16,8 @@ const fetchFonts = () => {
   return Font.loadAsync({
     'roboto-light': require('./assets/fonts/Roboto-Light.ttf'),
     'roboto-medium': require('./assets/fonts/Roboto-Medium.ttf'),
-    'roboto-regular': require('./assets/fonts/Roboto-Regular.ttf')
+    'roboto-regular': require('./assets/fonts/Roboto-Regular.ttf'),
+    'roboto-bold': require('./assets/fonts/Roboto-Bold.ttf'),
   });
 };
 
@@ -49,6 +51,8 @@ export default function App() {
                       component={Resources}/>
         <Stack.Screen name='SelfScreening'
                       component={SelfScreening}/>
+        <Stack.Screen name='News'
+                      component={News}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
