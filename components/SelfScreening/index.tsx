@@ -72,7 +72,7 @@ function SelfScreening({navigation, route}) {
         {answer()}
       </ScrollView>
       <View style={SelfScreeningStyles.confirm}>
-        <Button label={'Complete Form'} onPress={()=>{}} labelStyle={{}} buttonStyle={{}}/>
+        <Button label={'Complete Form'} onPress={() => navigation.navigate('SelfScreeningConfirmation')} labelStyle={{}} buttonStyle={{}}/>
       </View>
     </View>
     )

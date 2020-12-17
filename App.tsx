@@ -9,6 +9,7 @@ import Resources from './components/Resources/index'
 import News from './components/News/index'
 import EnableLocation from './components/Location/index'
 import SelfScreening from './components/SelfScreening/index'
+import SelfScreeningConfirmation from './components/SelfScreeningConfirmation/index'
 import PositiveTestForm from './components/PositiveTestForm/index'
 import PositiveTestProtocol from './components/PositiveTestProtocol/index'
 import Confirmation from './components/Confirmation'
@@ -54,6 +55,8 @@ export default function App() {
                       component={Resources}/>
         <Stack.Screen name='SelfScreening'
                       component={SelfScreening}/>
+        <Stack.Screen name='SelfScreeningConfirmation'
+                      component={SelfScreeningConfirmation}/>
         <Stack.Screen name='PositiveTest'
                       component={PositiveTestForm}/>
         <Stack.Screen name='PositiveTestProtocol'
