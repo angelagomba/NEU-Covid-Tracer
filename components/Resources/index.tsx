@@ -5,14 +5,14 @@ import Button from '../Button/index'
 import Arrow from '../Icons/arrow'
 import Tabs from '../Tabs/index'
 import * as WebBrowser from 'expo-web-browser'
+import HomeStyles from 'components/Home/home-styles';
+import SearchBar from '../SearchBar/index'
 
 import { 
   ScrollView,
   Text,
   View 
 } from 'react-native'
-import HomeStyles from 'components/Home/home-styles';
-
 
 
 const demoResources = [{
@@ -20,7 +20,6 @@ const demoResources = [{
   desc: 'i like chocolate'
 
 }]
-
 
 function Resources({navigation, route}) {
 
@@ -41,6 +40,7 @@ const resourceEntries = () => ( demoResources.map((r) => resource(r.title, r.des
   return (
     <View>
       <Header label={'Resources'} labelStyle={{}}/>
+      <SearchBar navigation={navigation} route={route} />
       <ScrollView style={ResourcesStyles.resources}>
       {resourceEntries()}
       </ScrollView>
