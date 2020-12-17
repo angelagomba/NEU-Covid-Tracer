@@ -22,7 +22,7 @@ const SelfScreeningStyles = StyleSheet.create({
   },
   question2desc: {
     fontSize: 18,
-    textDecoration: 'underline'
+    textDecorationLine: 'underline'
 
   },
   break: {
