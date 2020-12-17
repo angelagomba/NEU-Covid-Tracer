@@ -8,6 +8,7 @@ Otherwise, you can view the app on a web browser.
 
 ## Running
 Run the following commands:
+> yarn install  
 > yarn start
 
 Your web browser will open an Expo tab that allows you to run the app in different views. It is recommended to download Xcode and view it in an iPhone X simulator. Otherwise, you can run it in the web browser, right click, select `Inspect`, in the top right corner of the panel on the right side select `Toggle device toolbar`, and choose the iPhone X dimensions.
