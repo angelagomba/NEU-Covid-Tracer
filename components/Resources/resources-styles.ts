@@ -2,9 +2,7 @@ import { StyleSheet } from 'react-native'
 
 const ResourcesStyles = StyleSheet.create({
   resources: {
-    marginBottom: 94,
-    height: '100%'
-
+    marginBottom: 100,
   },
   resourceContainer: {
     fontFamily: 'roboto-regular',
@@ -12,19 +10,29 @@ const ResourcesStyles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    paddingHorizontal: 30
+    paddingHorizontal: 30,
+    backgroundColor: '#FFFFFF',
   },
   text: {
     display: 'flex',
-    width: '75%'
+    marginVertical: 20,
+    marginRight: 20,
   },
   title: {
     fontSize: 18,
-    fontWeight: '500',
+    fontFamily: 'roboto-medium',
+    marginBottom: 10,
   },
   desc: {
-    fontSize: 12
-
+    fontSize: 12,
+    color: '#333333',
+    fontFamily: 'roboto-regular',
+  },
+  break: {
+    backgroundColor: '#EBEAEA',
+    width: '100%',
+    height: 1,
+    marginHorizontal: 9,
   }
 })
 
