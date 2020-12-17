@@ -30,7 +30,7 @@ const resource = (title: string, desc: string) => {
         <Text style={ResourcesStyles.title}>{title}</Text>
         <Text style={ResourcesStyles.desc}>{desc}</Text>
       </View>
-      <Arrow width={10} height={17}/>
+      <Arrow width={'10'} height={'17'}/>
     </View>
   )
 }

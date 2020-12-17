@@ -21,10 +21,10 @@ function Home({ navigation, route }) {
   const buttons = ( 
     <View style={HomeStyles.buttonsContainer}>
       <View style={HomeStyles.buttonContainer}>
-        <Button label={'Complete Self Screening'} onPress={navigation.navigate('SelfScreening')} buttonStyle={{}} labelStyle={{}}/> 
+        <Button label={'Complete Self Screening'} onPress={() => navigation.navigate('SelfScreening')} buttonStyle={{}} labelStyle={{}}/> 
       </View>
       <View style={[HomeStyles.buttonContainer, {marginTop:10}]}>
-        <Button label={'Report Positive Test Result'} onPress={navigation.navigate('PositiveTest')} buttonStyle={{}} labelStyle={{}}/>
+        <Button label={'Report Positive Test Result'} onPress={() => navigation.navigate('PositiveTest')} buttonStyle={{}} labelStyle={{}}/>
       </View>
     </View>
   )

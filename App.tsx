@@ -7,6 +7,7 @@ import Home from './components/Home/index'
 import Login from './components/Login/index'
 import Resources from './components/Resources/index'
 import EnableLocation from './components/Location/index'
+import SelfScreening from './components/SelfScreening/index'
 import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading'
 
@@ -46,6 +47,8 @@ export default function App() {
                       component={Home}/>
         <Stack.Screen name='Resources'
                       component={Resources}/>
+        <Stack.Screen name='SelfScreening'
+                      component={SelfScreening}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
