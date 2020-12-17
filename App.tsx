@@ -13,6 +13,7 @@ import SelfScreeningConfirmation from './components/SelfScreeningConfirmation/in
 import PositiveTestForm from './components/PositiveTestForm/index'
 import PositiveTestProtocol from './components/PositiveTestProtocol/index'
 import Confirmation from './components/Confirmation'
+import Profile from './components/Profile'
 import * as Font from 'expo-font'
 import AppLoading from 'expo-app-loading'
 
@@ -65,6 +66,8 @@ export default function App() {
                       component={Confirmation}/>
         <Stack.Screen name='News'
                       component={News}/>
+        <Stack.Screen name='Profile'
+                      component={Profile}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
